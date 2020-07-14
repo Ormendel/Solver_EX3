@@ -181,9 +181,9 @@ RealVariable solver::operator /(const double x, const RealVariable& y){
     return RealVariable(co1,pow1,co2,pow2,y.var,num);
 }
 RealVariable solver::operator ^(const RealVariable& x, const RealVariable& y){
-    return RealVariable();
+    return RealVariable();//Default by instructions from the excercise
 }
-//add negative power!!
+//no need to refer to negative powers - only [0,2]
 RealVariable solver::operator ^(const RealVariable& x, const double y){
     if(!x.power_1 && !x.power_2){
         return RealVariable(0,false,0,false,x.var,x.num*y);
